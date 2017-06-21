@@ -11,8 +11,8 @@ body {
 }
 :hover,
 :focus {
-  transition: all ease-in 3s;
-  -webkit-transition: all ease-in 3s;
+  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-in 0.3s;
 }
 /*----------------------------
 	Heading Group
@@ -57,6 +57,9 @@ h5,
 -----------------------------------*/
 .mar_zero_btm {
   margin-bottom: 0;
+}
+.pad_zero {
+  padding: 0;
 }
 /*----------------------------------
 	Bootstrap overright
@@ -123,6 +126,7 @@ a.navbar-brand {
   position: absolute;
   top: -15px;
   right: 10px;
+  left: 0;
 }
 /*--------------------------------------
 							Well
@@ -226,21 +230,129 @@ label {
   border-radius: 3px;
   padding: 15px;
   height: 100%;
+  overflow: auto;
 }
 .panel-header {
   margin-bottom: 20px;
   border-bottom: 1px solid #bababa;
+  padding-bottom: 15px;
 }
 .panel-header h4 {
   margin-top: 0;
 }
 /*--------------------------
-	Mobile & Tablet
+	Sidebar
 ---------------------------*/
+aside {
+  height: 100%;
+}
+aside .sidebar {
+  background: linear-gradient(180deg, #000, #2b2b2b);
+  height: calc(100% - 100px);
+  margin-top: 100px;
+}
+aside .sidebar .nav-heading {
+  height: 50px;
+  background: #363636;
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+aside .sidebar .navbar {
+  border: 0;
+}
+aside .sidebar .navbar .navbar-collapse {
+  padding: 0;
+}
+aside .sidebar .navbar ul {
+  width: 100%;
+}
+aside .sidebar .navbar ul.nav li {
+  width: 100%;
+  border-bottom: 1px solid #444;
+}
+aside .sidebar .navbar ul.nav li a {
+  color: #fff;
+}
+aside .sidebar .navbar ul.nav li a:hover,
+aside .sidebar .navbar ul.nav li a:focus,
+aside .sidebar .navbar ul.nav li a:visited {
+  background: linear-gradient(180deg, #a04000, #bb6304);
+}
+aside .sidebar .navbar ul.nav li.dropdown.open > a {
+  background: linear-gradient(180deg, #a04000, #bb6304);
+  color: #fff;
+}
+aside .sidebar .navbar ul.nav li.dropdown.open > a:hover,
+aside .sidebar .navbar ul.nav li.dropdown.open > a:focus {
+  background: linear-gradient(180deg, #a04000, #bb6304);
+  color: #fff;
+}
+aside .sidebar .navbar .dropdown-menu {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0 0 0 15px;
+}
+aside .sidebar .navbar .dropdown-menu:before {
+  border-width: 0;
+  border-color: transparent;
+  content: none;
+  right: 0;
+}
+aside .sidebar .navbar .dropdown-menu li {
+  position: relative;
+}
+aside .sidebar .navbar .dropdown-menu li:last-child {
+  border: none;
+}
+aside .sidebar .navbar .dropdown-menu li:before {
+  border-width: 1px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  border-left-color: #444;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  right: 0;
+}
+aside .sidebar .navbar .dropdown-menu li > a {
+  padding: 15px;
+}
+aside .sidebar .navbar .dropdown-menu li > a:hover {
+  background: none !important;
+  color: #eb7900;
+}
+aside .sidebar .navbar .dropdown-menu li > a:before {
+  content: "\f192";
+  font-family: 'FontAwesome';
+  position: absolute;
+  border-width: 0;
+  left: -6px;
+  top: 14px;
+}
+aside .sidebar .navbar .dropdown-menu li > a.active {
+  color: #eb7900;
+}
+aside .sidebar .navbar .dropdown-menu li > a.active:before {
+  content: "\f192";
+  font-family: 'FontAwesome';
+  position: absolute;
+  border-width: 0;
+  left: -6px;
+  top: 14px;
+}
+/*--------------------------
+		Mobile & Tablet
+	---------------------------*/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   /*-----------------------
-		Mobile Margin
-	----------------------*/
+			Mobile Margin
+		----------------------*/
   .mar-xs-bottom-15 {
     margin-bottom: 15px;
   }

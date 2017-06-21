@@ -10,8 +10,8 @@ body{
 }
 
 :hover, :focus{
-	transition: all ease-in 3s;
-	-webkit-transition: all ease-in 3s;
+	transition: all ease-in 0.3s;
+	-webkit-transition: all ease-in 0.3s;
 }
 
 /*----------------------------
@@ -56,7 +56,9 @@ h5, .h5{
 .mar_zero_btm{
     margin-bottom:@zero;
 }
-
+.pad_zero{
+	padding: @zero;
+}
 
 
 /*----------------------------------
@@ -132,6 +134,7 @@ a{
 		position: @absolute;
 		top: -@gap_15;
 		right: @gap_10;
+		left: @zero;
 	}
 }
 
@@ -253,29 +256,143 @@ label{
     border-radius: @border_radius_3;
     padding:@gap_15;
 	height: @hundred;
+	overflow: @auto;
 }
 .panel-header{
 	margin-bottom: @gap_20;
 	border-bottom: @base-border;
+	padding-bottom: @gap_15;
     & h4{
         margin-top: @zero;
     }
 }
 
-
-
-
 /*--------------------------
-	Mobile & Tablet
+	Sidebar
 ---------------------------*/
-@media @mobile{
-	
-	/*-----------------------
-		Mobile Margin
-	----------------------*/
-	.mar-xs-bottom-15{
-		margin-bottom: @gap_15;
+aside{
+	height: @hundred;
+	.sidebar{
+		background: @sidebar_bg;
+		height: calc(@hundred ~"-" 100px );
+		margin-top: 100px;
+		.nav-heading{
+			height: @gap_10 * 5;
+			background: #363636;
+			padding:0 @gap_15;
+			line-height: @gap_10 * 5;
+			font-size: @base_font_size + 1;
+			color: #fff;
+		}
+	.navbar{
+		border:@zero;
+		.navbar-collapse{
+			padding: @zero;
+		}
+		ul{
+			width: @hundred;
+		}
+		ul.nav li{
+			width: @hundred;
+			border-bottom: 1px solid @base_font_color;
+			a{
+				color: @white_text;
+				&:hover, &:focus, &:visited{
+					background: @btn_warning;
+				}
+			}
+			&.dropdown{
+				&.open{
+				> a{
+					background: @btn_warning;
+					color: @white_text;
+					&:hover, &:focus{
+						background: @btn_warning;
+						color: @white_text;
+					}		
+				}
+			}
+			}
+
+		}
+		.dropdown-menu{
+			position: @relative;
+			border: @none;
+			background: transparent;
+			padding: @zero @zero @zero @gap_15;
+			&:before{
+				border-width: @zero;
+				border-color: transparent;
+				content: @none;
+				right:0;
+				}
+			li{
+				position: @relative;
+				&:last-child{	
+					border: @none;
+				}
+				&:before{
+					border-width: 1px;
+					content: "";
+					position: @absolute;
+					left: 0;
+					top: 0;
+					height: @gap_10 * 5;
+					border-left-color:@base_font_color;
+					border-right: @none;
+					border-top: @none;
+					border-bottom: @none; 
+					right: 0;
+				}
+				> a{
+					padding:@gap_15;
+					&:hover{
+						background: @none !important;
+						color: @warning_text;
+					}
+					&:before{
+						content: "\f192";
+						font-family:'FontAwesome';
+						position: @absolute;
+						border-width: 0;
+						left: -6px;
+						top: 14px;
+					}
+					&.active{
+						color: @warning_text;
+						
+						&:before{
+							content: "\f192";
+							font-family:'FontAwesome';
+							position: @absolute;
+							border-width: 0;
+							left: -6px;
+							top: 14px;
+							
+						}
+					}
+					}
+				}
+				
+				
+			}
+		}
+		
+		}
 	}
+
+
+	/*--------------------------
+		Mobile & Tablet
+	---------------------------*/
+	@media @mobile{
+		
+		/*-----------------------
+			Mobile Margin
+		----------------------*/
+		.mar-xs-bottom-15{
+			margin-bottom: @gap_15;
+		}
 	
 	/*--------------------------------------
 		Mobile Heading Font size
