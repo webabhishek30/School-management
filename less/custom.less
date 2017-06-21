@@ -125,7 +125,7 @@ a{
 	min-width:(@gap_30 * 6) + 20;
 	border-radius:@border_radius_3;
 	border-bottom:2px solid #0295de;
-	:before{
+	&:before{
 		content:"";
 		border-top: 8px solid transparent;
 		border-bottom: 8px solid @white_text;
@@ -164,9 +164,19 @@ a{
 		----------------------------------------*/
 		.breadcrumb{
 			padding: @zero;
-			background:none;
+			background:@none;
+			margin: @zero;
 		}
 
+		/*--------------------------------------
+						Caret
+		---------------------------------------*/	
+		.sidebar{
+			.caret{
+				float:@right;
+				margin-top: @gap_10;
+			}
+		}
 /*------------------------------
 	Forms 
 -------------------------------*/
@@ -182,7 +192,7 @@ label{
 }
 
 .form-horizontal{
-	&	.control-label{
+	&.control-label{
 		text-align: @left;
 	}	
 }
@@ -297,7 +307,7 @@ aside{
 			border-bottom: 1px solid @base_font_color;
 			a{
 				color: @white_text;
-				&:hover, &:focus, &:visited{
+				&:hover, &:focus, &:visited, &.active{
 					background: @btn_warning;
 				}
 			}
@@ -320,6 +330,7 @@ aside{
 			border: @none;
 			background: transparent;
 			padding: @zero @zero @zero @gap_15;
+			font-size: @base_font_size;
 			&:before{
 				border-width: @zero;
 				border-color: transparent;
@@ -337,16 +348,17 @@ aside{
 					position: @absolute;
 					left: 0;
 					top: 0;
-					height: @gap_10 * 5;
-					border-left-color:@base_font_color;
+					height: (@gap_10 * 5) - 1;
+					border-left:1px solid @base_font_color;
 					border-right: @none;
 					border-top: @none;
 					border-bottom: @none; 
 					right: 0;
+					width: 1px;
 				}
 				> a{
 					padding:@gap_15;
-					&:hover{
+					&:hover, &.active{
 						background: @none !important;
 						color: @warning_text;
 					}
@@ -355,8 +367,8 @@ aside{
 						font-family:'FontAwesome';
 						position: @absolute;
 						border-width: 0;
-						left: -6px;
-						top: 14px;
+						left: 9 - @gap_15;
+						top: @gap_15 + 1;
 					}
 					&.active{
 						color: @warning_text;
@@ -366,8 +378,8 @@ aside{
 							font-family:'FontAwesome';
 							position: @absolute;
 							border-width: 0;
-							left: -6px;
-							top: 14px;
+							left: 9 - @gap_15;
+							top: @gap_15 + 1;
 							
 						}
 					}

@@ -16,6 +16,10 @@
     <!-- Include Font awesome icons -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="css/plugins/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/plugins/style.css">
+
     <!-- Custom -->
     <link rel="stylesheet" href="css/custom.css">
     
@@ -81,10 +85,10 @@
       <!-- End Header Section -->
       <!-- Main Section -->
       <section class="container-fluid main-container">
-        <aside class="col-md-2 pad_zero">
-			<section class="sidebar">
+        <aside class="col-md-2 pad_zero" id="demo">
+			<section class="sidebar" id="examples">
 				<div class="nav-heading">Main Navigation</div>
-				<nav class="navbar">
+				<nav id="content-2" class="content mCustomScrollbar navbar" data-mcs-theme="minimal-dark">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -98,24 +102,115 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+							<li><a href="dashboard.html" class="active">Dashboard <span class="sr-only">(current)</span></a></li>
 							<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#" class="active">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registration <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="new-registration.html">New Registration</a></li>
+									<li><a href="#">List of Registered</a></li>
+								</ul>
 							</li>
-							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Quick Admission</a></li>
+									<li><a href="#">New Admission</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students Management <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Quick Admission</a></li>
+									<li><a href="#">New Admission</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Class <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Class</a></li>
+									<li><a href="#">Roll No. Range list</a></li>
+									<li><a href="#">Consession List</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Caste</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Admin User</a></li>
+									<li><a href="#">User Type</a></li>
+									<li><a href="#">Student User</a></li>
+									<li><a href="#">Registered User</a></li>
+								</ul>
+							</li>
+							<li><a href="#">User Rights</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Student Strength Report</a></li>
+									<li><a href="#">Administrative Panel</a></li>
+									<li><a href="#">Account Report</a></li>
+									<li><a href="#">Daily Collection Report (DCR)</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Batch(s)</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notifications <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Notifications</a></li>
+									<li><a href="#">Internal Comm.</a></li>
+									<li><a href="#">Study Query</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">System <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Manage Head List</a></li>
+									<li><a href="#">Fees Details</a></li>
+									<li><a href="#">Fine Details</a></li>
+									<li><a href="#">Manage Bank</a></li>
+									<li><a href="#">Fee Concession</a></li>
+									<li><a href="#">Concession JqGrid</a></li>
+									<li><a href="#">Master Setting</a></li>
+									<li><a href="#">Configuration</a></li>
+									<li><a href="#">Template Manager</a></li>
+									<li><a href="#">Keyword Manager</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Utility <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Export to Tally</a></li>
+									<li><a href="#">Import Student</a></li>
+									<li><a href="#">Import Payment Slip</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marks Management <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">C</a></li>
+									<li><a href="#">C++</a></li>
+									<li><a href="#">Data Structure</a></li>
+									<li><a href="#">PHP</a></li>
+									<li><a href="#">Java</a></li>
+									<li><a href="#">SEO</a></li>
+									<li><a href="#">SMO</a></li>
+									<li><a href="#">Niddi</a></li>
+									<li><a href="#">Sport</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Document Type</a></li>
+									<li><a href="#">Document List</a></li>
+								</ul>
+							</li>
 						</ul>
 						</div><!-- /.navbar-collapse -->
 					</nav>
 			</section>
 		</aside>
-        <section class="col-md-10 content-area">
+        <section class="col-md-10 content-area content mCustomScrollbar" data-mcs-theme="minimal-dark">
             <div class="panel-header">
                 <div class="row">
                     <div class="col-xs-10">
@@ -390,6 +485,7 @@
 			
 			});
 		</script>
-   	
+   	<!-- custom scrollbar plugin -->
+	<script src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
   </body>
 </html>

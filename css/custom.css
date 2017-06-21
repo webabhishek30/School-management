@@ -117,7 +117,7 @@ a.navbar-brand {
   border-radius: 3px;
   border-bottom: 2px solid #0295de;
 }
-.dropdown-menu :before {
+.dropdown-menu:before {
   content: "";
   border-top: 8px solid transparent;
   border-bottom: 8px solid #fff;
@@ -153,6 +153,14 @@ a.navbar-brand {
 .breadcrumb {
   padding: 0;
   background: none;
+  margin: 0;
+}
+/*--------------------------------------
+						Caret
+		---------------------------------------*/
+.sidebar .caret {
+  float: right;
+  margin-top: 10px;
 }
 /*------------------------------
 	Forms 
@@ -166,7 +174,7 @@ label {
 .form-group {
   margin-bottom: 30px;
 }
-.form-horizontal .control-label {
+.form-horizontal.control-label {
   text-align: left;
 }
 .form-control {
@@ -277,7 +285,8 @@ aside .sidebar .navbar ul.nav li a {
 }
 aside .sidebar .navbar ul.nav li a:hover,
 aside .sidebar .navbar ul.nav li a:focus,
-aside .sidebar .navbar ul.nav li a:visited {
+aside .sidebar .navbar ul.nav li a:visited,
+aside .sidebar .navbar ul.nav li a.active {
   background: linear-gradient(180deg, #a04000, #bb6304);
 }
 aside .sidebar .navbar ul.nav li.dropdown.open > a {
@@ -294,6 +303,7 @@ aside .sidebar .navbar .dropdown-menu {
   border: none;
   background: transparent;
   padding: 0 0 0 15px;
+  font-size: 13px;
 }
 aside .sidebar .navbar .dropdown-menu:before {
   border-width: 0;
@@ -313,17 +323,19 @@ aside .sidebar .navbar .dropdown-menu li:before {
   position: absolute;
   left: 0;
   top: 0;
-  height: 50px;
-  border-left-color: #444;
+  height: 49px;
+  border-left: 1px solid #444;
   border-right: none;
   border-top: none;
   border-bottom: none;
   right: 0;
+  width: 1px;
 }
 aside .sidebar .navbar .dropdown-menu li > a {
   padding: 15px;
 }
-aside .sidebar .navbar .dropdown-menu li > a:hover {
+aside .sidebar .navbar .dropdown-menu li > a:hover,
+aside .sidebar .navbar .dropdown-menu li > a.active {
   background: none !important;
   color: #eb7900;
 }
@@ -333,7 +345,7 @@ aside .sidebar .navbar .dropdown-menu li > a:before {
   position: absolute;
   border-width: 0;
   left: -6px;
-  top: 14px;
+  top: 16px;
 }
 aside .sidebar .navbar .dropdown-menu li > a.active {
   color: #eb7900;
@@ -344,7 +356,7 @@ aside .sidebar .navbar .dropdown-menu li > a.active:before {
   position: absolute;
   border-width: 0;
   left: -6px;
-  top: 14px;
+  top: 16px;
 }
 /*--------------------------
 		Mobile & Tablet
