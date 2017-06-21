@@ -1,0 +1,286 @@
+/* LESS Document */
+html, body{
+	height: @hundred;
+}
+body{
+	font-family: @base_font_family;
+	font-size: @base_font_size;
+	color: @base_font_color;
+	background: @base_background;
+}
+
+:hover, :focus{
+	transition: all ease-in 3s;
+	-webkit-transition: all ease-in 3s;
+}
+
+/*----------------------------
+	Heading Group
+----------------------------*/
+h1, .h1{
+	font-size: @heading_h1;
+	font-weight: 700;
+}
+h2, .h2{
+	font-size: @heading_h2;
+	font-weight: 700;
+}
+h3, .h3{
+	font-size: @heading_h3;
+	font-weight: 700;
+}
+h4, .h4{
+	font-size: @heading_h4;
+	font-weight: 700;
+}
+h5, .h5{
+	font-size: @heading_h5;
+}
+
+/*----------------------------------
+	Background Overlay
+----------------------------------*/
+.overlay{
+	width: @hundred;
+	height: @hundred;
+	position: @absolute;
+	left: @zero;
+	top: @zero;
+	background: @overlay;
+}
+
+
+/*----------------------------------
+    Custom Margin & Padding
+-----------------------------------*/
+.mar_zero_btm{
+    margin-bottom:@zero;
+}
+
+
+
+/*----------------------------------
+	Bootstrap overright
+---------------------------------*/
+.carousel {
+	height: @hundred;
+	
+	.carousel-inner{
+		height: @hundred;
+	}
+	.item{
+		width: @hundred;
+		height: @hundred;
+		position: @absolute;
+		left: @zero;
+		top: @zero;
+		
+		&.fee-payment{
+			background:@fee-payment no-repeat @zero @zero;
+			background-size: cover;
+		}
+		&.library{
+			background:@library no-repeat @zero @zero;
+			background-size: cover;
+		}
+		&.management{
+			background:@management no-repeat @zero @zero;
+			background-size: cover;
+		}
+	}
+}
+
+		/*--------------------------------
+				Buttons 
+		--------------------------------*/
+
+		.btn{
+			border: @zero;
+			height: @base_font_size * 3;
+		}
+
+		.btn-primary{
+			background:@btn_primary;
+			&:hover{
+				background:@btn_primary_hover;
+			}
+		}
+		.btn-warning{
+			background:@btn_warning;
+			&:hover{
+				background:@btn_warning_hover;
+			}
+		}
+
+a{
+	&.navbar-brand{
+		padding-left: @zero;
+		color: @white_text;
+	}
+}
+
+.dropdown-menu{
+	min-width:(@gap_30 * 6) + 20;
+	border-radius:@border_radius_3;
+	border-bottom:2px solid #0295de;
+	:before{
+		content:"";
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid @white_text;
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+		position: @absolute;
+		top: -@gap_15;
+		right: @gap_10;
+	}
+}
+
+		/*--------------------------------------
+							Well
+		---------------------------------------*/
+
+		.well{
+			padding: @gap_15;
+			background: transparent;
+			border-radius: @border_radius_3;
+			& h3{
+				margin-top: @zero;
+			}
+			& .progress{
+				margin-bottom: @gap_10;
+				height: @gap_10;
+				border-radius: @zero;
+			}
+			& p:last-child{
+				margin-bottom: @zero;
+			}
+		}
+
+		/*---------------------------------------
+						Breadcrumb
+		----------------------------------------*/
+		.breadcrumb{
+			padding: @zero;
+			background:none;
+		}
+
+/*------------------------------
+	Forms 
+-------------------------------*/
+label{
+	font-size: @label_size;
+	color: @label_color;
+	font-weight: 400;
+	margin-bottom: @gap_10 - 3;
+}
+
+.form-group{
+	margin-bottom: @gap_30;
+}
+
+.form-horizontal{
+	&	.control-label{
+		text-align: @left;
+	}	
+}
+
+
+
+.form-control{
+	height: @form_control_height;
+	border-radius: @border_radius_3;
+	font-size: @base_font_size;
+	color: @base_font_color;
+	&:focus{
+		box-shadow: @zero @zero;
+		-webkit-box-shadow: @zero @zero;
+		border-color: @input_focus;
+	}
+}
+
+.input-group-addon{
+	font-size: @heading_h4;
+}
+
+
+/*--------------------------
+	Login Wrapper
+-------------------------*/
+.login{
+	position: @absolute;
+	z-index: 10;
+	margin-top: 10%;
+	h4{
+		color: @white_text;
+		margin-bottom: @gap_15;
+	}
+	.login-wrapper{
+		background:@login_wrapper_bg;
+		padding:@gap_15;
+		width: @hundred;
+		a{
+			color: @white_text;
+		}
+		label{
+			font-size: @base_font_size + 1;
+			color: #cecece;
+		}
+	}
+}
+
+/*----------------------------
+	Dashboard 
+---------------------------*/
+.icons{
+	div{
+		float: @left;
+	}
+	.dropdown > a{
+		display:block;
+		line-height: @gap_20 * 3;
+		width: @gap_20 * 2;
+		text-align: @center;
+		float: @left;
+		color: @white_text;
+	}
+}
+.main-container.container-fluid{
+    padding-left: @zero;
+	height: calc(@hundred - 11) ;
+}
+.content-area{
+    background:@main_container_bg;
+    border-radius: @border_radius_3;
+    padding:@gap_15;
+	height: @hundred;
+}
+.panel-header{
+	margin-bottom: @gap_20;
+	border-bottom: @base-border;
+    & h4{
+        margin-top: @zero;
+    }
+}
+
+
+
+
+/*--------------------------
+	Mobile & Tablet
+---------------------------*/
+@media @mobile{
+	
+	/*-----------------------
+		Mobile Margin
+	----------------------*/
+	.mar-xs-bottom-15{
+		margin-bottom: @gap_15;
+	}
+	
+	/*--------------------------------------
+		Mobile Heading Font size
+	--------------------------------------*/
+	h1, .h1{
+		font-size: @heading_h2;
+	}
+}
